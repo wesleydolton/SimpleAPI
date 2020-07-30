@@ -36,11 +36,10 @@ namespace SimpleAPI
                 app.UseDeveloperExceptionPage();
             }
 
-
+            app.UseHttpsRedirection();
 
             app.UseRouting();
 
-            //sfdsdfsd
 
             app.UseAuthorization();
 
