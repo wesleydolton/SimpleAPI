@@ -14,11 +14,17 @@ variables:
 
 steps:
 
+- task: UseDotNet@2
+  displayName: 'Use .NET Core SDK 3.1.302'  
+    inputs:
+    version: 3.1.302
+    installationPath: $(Agent.ToolsDirectory)/dotnet
+
 # Commands for Test Before building
 - task: DotNetCoreCLI@2
   inputs:
     command: test 
-    projects: '**/Test/*.csproj'
+    projects: '**/test/*.csproj'
     arguments: '--configuration $(buildconfiguration)'
 
 - script: dotnet build --configuration $(buildConfiguration)
