@@ -17,8 +17,8 @@ steps:
 # Commands for Test Before building
 - task: DotNetCoreCLI@2
   Inputs:
-    command: test #Test 'test' Command
-    projects: '**/Test/*.csproj' #Name of the Unit Tests project
+    command: test 
+    projects: '**/Test/*.csproj'
     arguments: '--configuration $(buildconfiguration)'
 
 - script: dotnet build --configuration $(buildConfiguration)
