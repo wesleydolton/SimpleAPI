@@ -17,7 +17,8 @@ namespace SimpleAPI.Test
         {
             var returnValue = controller.Get();
 
-
+            returnValue = null;
+            
             Assert.NotNull(returnValue);
 
             //Assert.IsType(weatherForecast, returnValue.GetEnumerator());
