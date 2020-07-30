@@ -15,7 +15,7 @@ variables:
 steps:
 
 # Commands for Test Before building
-- task: DotNetCoreCLI@3
+- task: DotNetCoreCLI@2
   inputs:
     command: test 
     projects: '**/Test/*.csproj'
