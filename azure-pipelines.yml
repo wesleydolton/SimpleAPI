@@ -14,17 +14,6 @@ variables:
 
 steps:
   # Commands for Test Before building
-
-- task: UseDotNet@2
-  inputs:
-    version: '5.0.x'
-    includePreviewVersions: true # Required for preview versions
-    
-- task: UseDotNet@2
-  inputs:
-    version: '3.1.x'
-    packageType: runtime
-
 - task: DotNetCoreCLI@2
   inputs:
     command: test
